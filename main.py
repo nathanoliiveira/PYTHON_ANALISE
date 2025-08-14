@@ -9,16 +9,12 @@ class Modelo:
     def __init__(self):
         self.df = None
         self.models = {}
-
+        
     def CarregarDataset(self, path):
         column_names = ['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species']
         self.df = pd.read_csv(path, names=column_names)
 
     def TratamentoDeDados(self):
-        """
-        Realiza o pré-processamento dos dados carregados.
-        """
-        # Verificar dados ausentes
         print("Dados ausentes por coluna:")
         print(self.df.isnull().sum())
         
