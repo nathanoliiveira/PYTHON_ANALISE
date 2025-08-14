@@ -11,10 +11,6 @@ class Modelo:
         self.models = {}
 
     def CarregarDataset(self, path):
-        """
-        Carrega o conjunto de dados a partir de um arquivo CSV.
-        """
-        # Colunas já presentes no dataset Iris
         column_names = ['SepalLengthCm', 'SepalWidthCm', 'PetalLengthCm', 'PetalWidthCm', 'Species']
         self.df = pd.read_csv(path, names=column_names)
 
